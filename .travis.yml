@@ -20,7 +20,6 @@ env:
     # Variables found by default in Docker Hub builder
     - DOCKER_REPO=trustcode/doodba-trustcode
   matrix:
-    - DOCKER_TAG=10.0
     - DOCKER_TAG=11.0
 
 before_install:
