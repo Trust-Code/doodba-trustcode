@@ -1,0 +1,42 @@
+./odoo:
+    defaults:
+        # Shallow repositories ($DEPTH_DEFAULT=1) are faster & thinner
+        # You may need a bigger depth when merging PRs (use $DEPTH_MERGE
+        # for a sane value of 100 commits)
+        depth: $DEPTH_DEFAULT
+    remotes:
+        odoo: https://github.com/odoo/odoo.git
+    target:
+        odoo $ODOO_VERSION
+    merges:
+        - odoo $ODOO_VERSION
+
+./odoo-brasil:
+    defaults:
+        depth: $DEPTH_DEFAULT
+    remotes:
+        trustcode: https://github.com/Trust-Code/odoo-brasil.git
+    target:
+        trustcode $ODOO_VERSION
+    merges:
+        - trustcode $ODOO_VERSION
+
+./trustcode-addons:
+    defaults:
+        depth: $DEPTH_DEFAULT
+    remotes:
+        trustcode: https://github.com/Trust-Code/trustcode-addons.git
+    target:
+        trustcode $ODOO_VERSION
+    merges:
+        - trustcode $ODOO_VERSION
+
+./web:
+    defaults:
+        depth: $DEPTH_DEFAULT
+    remotes:
+        trustcode: https://github.com/OCA/web.git
+    target:
+        trustcode $ODOO_VERSION
+    merges:
+        - trustcode $ODOO_VERSION

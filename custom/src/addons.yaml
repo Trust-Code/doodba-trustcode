@@ -1,0 +1,6 @@
+odoo-brasil:
+  - "*"
+trustcode-addons:
+  - "*"
+web:
+  - "web_tree_many2one_clickable"
